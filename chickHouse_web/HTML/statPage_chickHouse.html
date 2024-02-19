@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+        <!-- Mise à jour toutes les 5s -->
+    <!--- <meta http-equiv="refresh" content="5"> -->
+
+    <title>&#128020; DashBoard</title>
+    <link rel="stylesheet" href="{% static 'mainPage_style.css' %}">
+  </head>
+  <body>
+
+    <div class="content_CONTAINER">
+      <h1> Statistiques - &#128020; </h1>
+      
+      <div class="plot_CONTAINER">
+        {{plotView_doorEvents | safe}}
+      </div>
+
+      <div class="menu_CONTAINER">
+        <button class="btn_menu" onclick="window.location.href='/server-info'"> Info Serveur </button>
+        <button class="btn_menu" onclick="window.location.href='/dashboard'"> Controle porte </button>
+      </div>
+    </div>   
+     
+  </body>
+</html>

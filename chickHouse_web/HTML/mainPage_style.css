@@ -1,0 +1,89 @@
+:root {
+    --main-font-type: "Lucida Console";
+}
+
+.content_CONTAINER {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    border-radius: 25px;
+    background-color: #27AE60;
+}
+
+.action_CONTAINER {
+    display: flex;
+    flex-flow: column wrap;
+
+    width: 75%;
+
+    padding: 10px;
+
+    border-radius: 20px;
+    background-color: #5DADE2;
+}
+
+.btn_open {
+    color: white;
+    padding: 10px;
+    width: 40%;
+    background-color: #27AE60;
+
+    border: black dotted;
+}
+
+.btn_close {
+    color: white;
+    padding: 10px;
+    width: 40%;
+    background-color: red;
+
+    border: black dotted;
+}
+
+.menu_CONTAINER {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 60%;
+
+    padding: 20px;
+
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+.btn_menu {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    color: white;
+    padding: 10px;
+    width: 40%;
+    background-color: #2471A3;
+
+    border: black solid;
+    border-radius: 50px;
+}
+
+.plot_CONTAINER {
+    max-width: 90%;
+    overflow-x: auto;
+}
+
+body {
+    align-content: center;
+    text-align: center;
+    font-family: var(--main-font-type);
+}
+
+p {
+    padding: 10px;
+}

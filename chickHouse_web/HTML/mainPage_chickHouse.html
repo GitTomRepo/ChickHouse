@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+        <!-- Mise à jour toutes les 5s -->
+    <!--- <meta http-equiv="refresh" content="5"> -->
+
+    <title>&#128020; DashBoard</title>
+    <link rel="stylesheet" href="{% static 'mainPage_style.css' %}">
+  </head>
+  <body>
+
+    <div class="content_CONTAINER">
+      <h1> Centre de contrôle - &#128020; </h1>
+
+      <div class="action_CONTAINER">
+        <h2> Controle porte </h2>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <button type="submit" name="open_door" class="btn_open">OUVRIR</button>
+          <button type="submit" name="close_door" class="btn_close">FERMER</button>
+        </form>
+        <h3> Etat actuel : {{locker}} </h3>
+      </div>      
+  
+      <div id="Info_Container">
+        <p> Dernière ouverture : <b>{{last_open}}</b> </p>
+        <p> Dernière fermeture : <b>{{last_close}}</b> </p>
+      </div> 
+
+      <div class="menu_CONTAINER">
+        <button class="btn_menu" onclick="window.location.href='/server-info'"> Info Serveur </button>
+        <button class="btn_menu" onclick="window.location.href='/admin-view'"> Statistiques </button>
+      </div>
+    </div>   
+     
+  </body>
+</html>
